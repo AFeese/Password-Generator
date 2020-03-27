@@ -6,7 +6,7 @@ This program is designed to assist with generating completely random characters 
 The program works as follows: 
 
 ...
-When the Generate Password button is clicked, the user is prompted with four options for password criteria: lowercase letters, uppercase letters, special characters, and numbers. 
+When the Generate Password button is clicked, the user is prompted with four options for password criteria: lowercase letters, uppercase letters, special characters, and numbers. If no criteria is selected, the user is prompted to try again.
 
 The last prompt asks the user to pick a password length between 8 and 128 characters. If the user picks a number outside of those parameters, an alert is shown that reads, "incorrect selection. Please try again".
 
