@@ -26,24 +26,6 @@ function generatePassword() {
   var withNumbers = confirm("Do you want numbers?")
   var withSpecialCharacters = confirm("Do you want special characters")
 
-    var isCorrect = false;
-
-    // A while loop is used to prompt the user for their desired password length until
-    // the correct requirements ( 8 - 128 characters) are fulfilled.
-    while(isCorrect ===false) {
-      var userInput = prompt("Choose a password length of at least 8 characters, but no more than 128 characters.")
-
-      if (userInput >= 8 && userInput <= 128) {
-        isCorrect = true;
-    
-      }else {
-        alert("Incorrect selection. Please try again.")
-        isCorrect = false;
-      }
-    }
-    
-    console.log(pickedCharacters);
-
     //if statements are used here to add each of the user's preferred criteria to the 
     // empty string "pickedCharacters".
   if (withLowerCase) {
@@ -58,6 +40,33 @@ function generatePassword() {
   if (withSpecialCharacters) {
     pickedCharacters = pickedCharacters + specialCharacters;
   }
+
+  //If the user clicks "cancel" for all four selections, the function is run again until something is selected.
+  if (withLowerCase === false && withUpperCase === false && withNumbers === false && withSpecialCharacters === false) {
+    alert("You have not selected any criteria. Please try again.")
+    generatePassword();
+  }
+
+
+  var isCorrect = false;
+
+  // A while loop is used to prompt the user for their desired password length until
+  // the correct requirements ( 8 - 128 characters) are fulfilled.
+  while(isCorrect ===false) {
+    var userInput = prompt("Choose a password length of at least 8 characters, but no more than 128 characters.")
+
+    if (userInput >= 8 && userInput <= 128) {
+      isCorrect = true;
+  
+    }else {
+      alert("Incorrect selection. Please try again.")
+      isCorrect = false;
+    }
+  }
+  
+  console.log(pickedCharacters);
+
+
 
 
 //Loop for running through user selection to generate random characters and collect them into a string.
