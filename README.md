@@ -1,6 +1,6 @@
 # 03 JavaScript: Password Generator
 
-Link to deployed application: https://apollodragon13.github.io/Password-Generator/
+Link to deployed application: https://AFeese.github.io/Password-Generator/
 
 Welcome to my Password Generator. 
 This program is designed to assist with generating completely random characters to make up a radomized password, each time the "Generate Password" button is clicked, and/or when the page is refreshed. A randomized password helps with obtaining better security and minimizes chances of password hacking, but is of course never guaranteed. 
